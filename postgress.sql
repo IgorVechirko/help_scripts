@@ -33,3 +33,13 @@ SELECT
 	(CASE WHEN COUNT(*) = COUNT(exp_level) THEN 1 ELSE 0 END) AS no_empty_exp_level
 FROM salaries
 LIMIT 10;
+
+
+--DISTINCT - return oncly unique values for specified column
+SELECT 
+	DISTINCT job_title
+FROM salaries;
+
+SELECT 
+	COUNT(DISTINCT job_title) AS jobs_amount
+FROM salaries;
