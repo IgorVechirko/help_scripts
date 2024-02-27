@@ -5,6 +5,7 @@ LIMIT 10;
 
 
 --Display job_title, exp_level, salary_in_usd columns under aliases with conditions in WHERE and ordered by salary(DESC, ASC) 
+-- combination "<>" - mean not equal other comparsion operators the same
 SELECT job_title as title
 		, exp_level as expirience
 		, salary_in_usd as money
@@ -66,4 +67,10 @@ SELECT
 		THEN 'Middle'
 		ELSE 'Other'
 		END AS Grade
+FROM salaries;
+
+
+--Cast int to float
+SELECT 
+	DISTINCT(CAST(remote_ration AS FLOAT) / 100)
 FROM salaries;
