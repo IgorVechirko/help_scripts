@@ -74,3 +74,27 @@ FROM salaries;
 SELECT 
 	DISTINCT(CAST(remote_ration AS FLOAT) / 100)
 FROM salaries;
+
+
+--Value exist in specified range
+SELECT
+	*
+FROM salaries
+WHERE
+	year BETWEEN 2020 AND 2024;
+
+
+--Value exist in list
+SELECT
+	*
+FROM salaries
+WHERE
+	year IN (2021, 2024);
+
+--LIKE search patern in text. % - any amount on any character 0 included, _ - exact one character.
+SELECT
+	DISTINCT(job_title)
+FROM salaries
+WHERE
+	job_title LIKE('%data%') 
+	OR job_title LIKE('%Data%');
