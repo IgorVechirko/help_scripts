@@ -1,3 +1,7 @@
+-------------------------------------------
+--  ds_salaries.csv DB for samples below --
+-------------------------------------------
+
 --Display all colums and 10 rows from salaries
 SELECT *
 FROM salaries;
