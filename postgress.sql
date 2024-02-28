@@ -125,3 +125,19 @@ FROM salaries
 GROUP BY company_location, year
 HAVING avg(salary_in_usd) > 300000
 ORDER BY av DESC
+
+
+--Result of query can be used with other statements. Nested query returned format depends on statement wich will use those data.
+--For comparsion in must be one value. For IN operator it must be a list. For FROM it must be a table with alias.
+SELECT *
+FROM salaries
+WHERE company_location IN (SELECT 
+				company_location 
+			   FROM salaries
+			   GROUP BY company_location
+			   HAVING AVG(salary_in_usd) > (SELECT 
+								AVG(salary_in_usd)
+							FROM salaries
+							)
+			)
+;
