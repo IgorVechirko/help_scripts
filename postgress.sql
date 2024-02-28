@@ -98,3 +98,26 @@ FROM salaries
 WHERE
 	job_title LIKE('%data%') 
 	OR job_title LIKE('%Data%');
+
+
+--ORDER BY alow agregate result by specified one or more columns.
+--To apply filtering to agregated data use HAVING
+--Statements execution order 
+--1. First, the product of all tables in the FROM clause is formed.
+--2. The WHERE clause is then evaluated to eliminate rows that do not satisfy the search_condition.
+--3. Next, the rows are grouped using the columns in the GROUP BY clause.
+--4. Then, groups that do not satisfy the search_condition in the HAVING clause are eliminated.
+--5. Next, the expressions in the SELECT statement target list are evaluated.
+--6. If the DISTINCT keyword in present in the select clause, duplicate rows are now eliminated.
+--7. The UNION is taken after each sub-select is evaluated.
+--8. Finally, the resulting rows are sorted according to the columns specified in the ORDER BY clause.
+--9. TOP clause is executed.
+
+SELECT 
+	year
+	, company_location AS loc
+	, ROUND(AVG(salary_in_usd), 0) AS av
+FROM salaries
+GROUP BY company_location, year
+HAVING avg(salary_in_usd) > 300000
+ORDER BY av DESC
