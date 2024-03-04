@@ -2,6 +2,41 @@
 --  ds_salaries.csv DB for samples below --
 -------------------------------------------
 
+--create DB
+CREATE DATABASE sandbox;
+--remove DB
+DROP DATABASE sandbox;
+
+--create backuup
+BACKUP DATABASE sandbox
+TO DISK = 'D:\backups\sendbox.bak';
+
+--create table
+CREATE TABLE public.salaries
+(
+	year integer,
+	exp_level text,
+	emp_type text,
+	job_title text,
+	salary integer,
+	salary_curr text,
+	salary_in_usd integer,
+	emp_location text,
+	remote_ratio text,
+	company_location text,
+	company_sizee text
+)
+	
+--INTO create table and copy selected data into it
+SELECT * 
+INTO salaries2 (IN external.db)
+FROM salaries
+	
+--remove table
+DROP TABLE salaries
+--remove data but not table
+TRUNCATE TABLE salaries;
+
 --Insert value into table. Specify columns order and values in relate oreder, missed columns will be 'null'
 INSERT INTO salaries(year, exp_level, emp_type, job_title, salary_in_usd, emp_localtion, remote_ration, company_location)
 VALUES
@@ -182,6 +217,7 @@ JOIN Album a ON a.AlbumId = t.AlbumId
 JOIN Artist art ON art.ArtistId = a.ArtistId
 WHERE i.BillingAddress = 'Theodor-Heuss-Straße 34'
 GROUP BY art.Name 
+
 --Self JOIN - a bit diff syntax and it joined table with itself
 --Here select customers from same city
 SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
@@ -200,8 +236,3 @@ SELECT exp_level, job_title FROM salaries
 SELECT * FROM  salaries
 WHERE EXISTS(SELECT * FROM salaries)
 
-
---INTO create table and copy selected data into it
-SELECT * 
-INTO salaries2 (IN external.db)
-FROM salaries
