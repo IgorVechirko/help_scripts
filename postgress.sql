@@ -18,7 +18,7 @@ CREATE TABLE public.salaries
 	exp_level text,
 	emp_type text,
 	job_title text,
-	salary integer,
+	salary integer,	
 	salary_curr text,
 	salary_in_usd integer,
 	emp_location text,
@@ -52,6 +52,19 @@ INSERT INTO salaries2(year, exp_level)
 SELECT salary_in_usd, company_location
 FROM salaries
 
+--Update table
+ALTER TABLE salaries
+ADD email text
+
+ALTER TABLE salaries
+DROP COLUMN email
+
+ALTER TABLE salaries
+RENAME COLUMN salary_in_usd TO usd_money
+
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype;
+	
 --Update column value
 UPDATE salaries
 SET job_title = 'Exotic title'
