@@ -184,3 +184,9 @@ FROM Customers A, Customers B
 WHERE A.CustomerID <> B.CustomerID
 AND A.City = B.City
 ORDER BY A.City;
+
+--UNION combine result from tow diff SELECT statements. Must be the same amount and type of columns.
+--UNION return distinct values, to receive all values use UNION ALL
+SELECT job_title, exp_level FROM salaries
+UNION
+SELECT exp_level, job_title FROM salaries
