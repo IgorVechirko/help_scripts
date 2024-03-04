@@ -2,6 +2,17 @@
 --  ds_salaries.csv DB for samples below --
 -------------------------------------------
 
+--Insert value into table. Specify columns order and values in relate oreder, missed columns will be 'null'
+INSERT INTO salaries(year, exp_level, emp_type, job_title, salary_in_usd, emp_localtion, remote_ration, company_location)
+VALUES
+	(2024, 'EX', 'FT', 'Software engineer', 4500, 'UA', 0, 'UA');
+--Or skipp columns name and specify all values for all columns in correct order
+INSERT INTO salaries
+VALUES
+	(2024, 'SE', 'FT', 'QA engineer', 120000, 'UAH', 4000, 'UA', 0, 'UA', 'M')
+	(2024, 'SE', 'FT', NULL, 120000, 'UAH', 4000, 'UA', 0, 'UA', 'M')
+
+
 --Display all colums and 10 rows from salaries
 SELECT *
 FROM salaries;
