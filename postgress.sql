@@ -161,3 +161,26 @@ WHERE company_location IN (SELECT
 							)
 			)
 ;
+
+--JOIN bind column from one table to related column from other table and create one result record
+--JOIN or INNER JOIN - create result record only if binding value exist in bouth tables
+--LEFT JOIN - create result record even if right table doesn't contain apropriate record, skiped field will be fill with NULL
+--RIGHT JOIN - create result record even if left table doesn't contain apropriate record, skiped field will be fill with NULL
+--FULL JOIN - cobine effect from RIGHT JOIN and LEFT JOIN
+SELECT 
+	i.BillingAddress 
+	, art.Name 
+FROM Invoice i
+INNER JOIN InvoiceLine il ON i.InvoiceId = il.InvoiceId
+INNER JOIN Track t ON t.TrackId = il.TrackId
+JOIN Album a ON a.AlbumId = t.AlbumId
+JOIN Artist art ON art.ArtistId = a.ArtistId
+WHERE i.BillingAddress = 'Theodor-Heuss-Straße 34'
+GROUP BY art.Name 
+--Self JOIN - a bit diff syntax and it joined table with itself
+--Here select customers from same city
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
