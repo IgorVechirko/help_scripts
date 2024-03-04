@@ -190,3 +190,7 @@ ORDER BY A.City;
 SELECT job_title, exp_level FROM salaries
 UNION
 SELECT exp_level, job_title FROM salaries
+
+--EXISTS return true if subquery return at leat one row. Oncly can be used with WHERE statement
+SELECT * FROM  salaries
+WHERE EXISTS(SELECT * FROM salaries)
