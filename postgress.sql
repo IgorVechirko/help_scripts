@@ -12,6 +12,11 @@ VALUES
 	(2024, 'SE', 'FT', 'QA engineer', 120000, 'UAH', 4000, 'UA', 0, 'UA', 'M')
 	(2024, 'SE', 'FT', NULL, 120000, 'UAH', 4000, 'UA', 0, 'UA', 'M')
 
+--Same as above but data slecting from another table
+INSERT INTO salaries2(year, exp_level)
+SELECT salary_in_usd, company_location
+FROM salaries
+
 --Update column value
 UPDATE salaries
 SET job_title = 'Exotic title'
@@ -194,3 +199,9 @@ SELECT exp_level, job_title FROM salaries
 --EXISTS return true if subquery return at leat one row. Oncly can be used with WHERE statement
 SELECT * FROM  salaries
 WHERE EXISTS(SELECT * FROM salaries)
+
+
+--INTO create table and copy selected data into it
+SELECT * 
+INTO salaries2 (IN external.db)
+FROM salaries
