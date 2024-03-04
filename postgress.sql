@@ -12,7 +12,16 @@ VALUES
 	(2024, 'SE', 'FT', 'QA engineer', 120000, 'UAH', 4000, 'UA', 0, 'UA', 'M')
 	(2024, 'SE', 'FT', NULL, 120000, 'UAH', 4000, 'UA', 0, 'UA', 'M')
 
+--Update column value
+UPDATE salaries
+SET job_title = 'Exotic title'
+WHERE job_title = 'Exotic titile'
 
+--Dlete rows
+DELETE
+FROM salaries
+WHERE job_title = 'Exotic title'
+	
 --Display all colums and 10 rows from salaries
 SELECT *
 FROM salaries;
