@@ -21,6 +21,7 @@ class Item:
 
 exp_raid_drop = (16, {Item("hero", "rare"): 1, Item("hero", "magic"): 11, Item("hero", "common"): 7, Item("gold"): 12000})
 exp_raid_drop = (41, {Item("hero", "rare"): 1, Item("hero", "magic"): 23, Item("hero", "common"): 22, Item("gold"): 37750})
+exp_raid_drop = (29, {Item("hero", "rare"): 1, Item("hero", "magic"): 21, Item("hero", "common"): 15, Item("gold"): 21750})
 
 class Raid:
     def __init__(self, name, stamina):
