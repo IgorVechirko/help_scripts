@@ -23,8 +23,10 @@ exp_raid_drop = (16, {Item("hero", "rare"): 1, Item("hero", "magic"): 11, Item("
 exp_raid_drop = (41, {Item("hero", "rare"): 1, Item("hero", "magic"): 23, Item("hero", "common"): 22, Item("gold"): 37750})
 exp_raid_drop = (29, {Item("hero", "rare"): 1, Item("hero", "magic"): 21, Item("hero", "common"): 15, Item("gold"): 21750})
 
-marksmen_insignia_15 = (10, {Item("gold", None, x2): 7800, Item("exp"): 136500, Item("insignia_marksman", "III): 74})
-marksmen_insignia_15 = (6, {Item("gold", None, "x2): 9360, Item("exp"): 8190, Item("insignia_marksman", "III): 78, Item("extract", "mythic"): 1})   
+gold_raid_drop = (8, {Item("hero", "magic"): 4, Item("hero", "common"): 5, Item("gold", None, "x2"): 504800, Item("exp"): 19630})
+
+marksmen_insignia_15 = (10, {Item("gold", None, "x2"): 7800, Item("exp"): 136500, Item("insignia_marksman", "III): 74})
+marksmen_insignia_15 = (6, {Item("gold", None, "x2"): 9360, Item("exp"): 8190, Item("insignia_marksman", "III): 78, Item("extract", "mythic"): 1})   
                                                                                                        
 
 class Raid:
