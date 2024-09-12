@@ -27,6 +27,7 @@ gold_raid_drop = (8, {Item("hero", "magic"): 4, Item("hero", "common"): 5, Item(
 gold_raid_drop = (8, {Item("hero", "magic"): 6, Item("hero", "common"): 4, Item("gold", None, "x2"): 508800, Item("exp"): 19630})
 gold_raid_drop = (12, {Item("hero", "magic"): 10, Item("hero", "common"): 9, Item("gold", None, "x2"): 763200, Item("exp"): 29440})
 gold_raid_drop = (39, {Item("hero", "magic"): 27, Item("hero", "common"): 22, Item("gold", None, "x2"): 2480000, Item("exp"): 95700})
+gold_raid_drop = (23, {Item("hero", "magic"): 13, Item("hero", "common"): 12, Item("gold", None, "x2"): 1462000, Item("exp"): 56440})
 
 marksmen_insignia_15 = (10, {Item("gold", None, "x2"): 7800, Item("exp"): 136500, Item("insignia_marksman", "III): 74})
 marksmen_insignia_15 = (6, {Item("gold", None, "x2"): 9360, Item("exp"): 8190, Item("insignia_marksman", "III): 78, Item("extract", "mythic"): 1})   
