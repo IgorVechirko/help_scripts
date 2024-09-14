@@ -34,6 +34,8 @@ marksmen_insignia_15 = (6, {Item("gold", None, "x2"): 9360, Item("exp"): 8190, I
 marksmen_insignia_15 = (43, {Item("gold"): 37760, Item("exp"): 57330, Item("insignia_marksman", "III): 291, Item("extract", "mythic"): 2, Item("extract", "legend"): 2})
 
 fight_insignia_15 = (13, {Item("gold"): 10140, Item("exp"): 9828, Item("insignia_fight", "III): 91, Item("extract", "mythic"): 1})
+
+gear_raid_III = (41, {Item("gold"): 164000, Item("exp", None, "x2"): 141300, Item("gear", "mythic"): 42, Item("gear", "legend"): 7, Item("event_points"): 945})
                                                                                                        
 
 class Raid:
