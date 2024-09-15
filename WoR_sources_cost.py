@@ -40,6 +40,8 @@ gear_raid_III = (162, {Item("gold"): 660100, Item("exp", None, "x2"): 568900, It
 gear_raid_III = (146, {Item("gold"): 598600, Item("exp", None, "x2"): 515900, Item("gear", "mythic"): 146, Item("gear", "legend"): 23, Item("event_points"): 3265, Item("demon_solder_shard, "epic"): 10, Item("demon_solder_shard, "rare"): 10})
 gear_raid_III = (23, {Item("gold"): 94300, Item("exp", None, "x2"): 81280, Item("gear", "mythic"): 22, Item("gear", "legend"): 5, Item("event_points"): 515, Item("demon_solder_shard, "rare"): 10})
 gear_raid_III = (13, {Item("gold"): 53300, Item("exp", None, "x2"): 45900, Item("gear", "mythic"): 11, Item("gear", "legend"): 2, Item("event_points"): 250})
+
+gear_raid_I = (13, {Item("gold"): 38000, Item("exp", None, "x2"): 25020, Item("gear", "mythic"): 7, Item("gear", "legend"): 4, Item("event_points"): 200, Item("demon_solder_shard, "rare"): 10})
                                                                                                        
 
 class Raid:
