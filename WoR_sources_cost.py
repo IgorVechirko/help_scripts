@@ -38,6 +38,7 @@ fight_insignia_15 = (13, {Item("gold"): 10140, Item("exp"): 9828, Item("insignia
 gear_raid_III = (41, {Item("gold"): 164000, Item("exp", None, "x2"): 141300, Item("gear", "mythic"): 42, Item("gear", "legend"): 7, Item("event_points"): 945})
 gear_raid_III = (162, {Item("gold"): 660100, Item("exp", None, "x2"): 568900, Item("gear", "mythic"): 145, Item("gear", "legend"): 36, Item("event_points"): 3440, Item("demon_solder_shard", "epic"): 20})
 gear_raid_III = (146, {Item("gold"): 598600, Item("exp", None, "x2"): 515900, Item("gear", "mythic"): 146, Item("gear", "legend"): 23, Item("event_points"): 3265, Item("demon_solder_shard, "epic"): 10, Item("demon_solder_shard, "rare"): 10})
+gear_raid_III = (23, {Item("gold"): 94300, Item("exp", None, "x2"): 81280, Item("gear", "mythic"): 22, Item("gear", "legend"): 5, Item("event_points"): 515, Item("demon_solder_shard, "rare"): 10})
                                                                                                        
 
 class Raid:
