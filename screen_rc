@@ -1,0 +1,15 @@
+screen -t service
+
+stuff "cd wc/sw_spdk^M"
+
+
+
+screen -t scripts
+
+stuff "cd wc/spdk_deploy/scripts^M"
+
+
+
+screen -t client
+
+stuff "cd wc/spdk_deploy/client^M"
